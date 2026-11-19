@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+      th:replace="~{layout/main :: html(
+                        title=~{::title},
+                        links=~{::links},
+                        content=~{::content},
+                        scripts=~{::scripts}
+                    )}">
+<head>
+    <title>Midnight Coder | Home</title>
+    <th:block th:fragment="links">
+        <link rel="stylesheet" th:href="@{/css/home/home.css}">
+    </th:block>
+</head>
+<body>
+    <div th:fragment="content">
+        <!-- Welcome Popup -->
+        <div th:if="${param.loginSuccess}" id="welcomePopup" class="welcome-popup">
+            <div class="popup-content">
+                <div class="popup-icon">🧊</div>
+                <h2>Welcome back to the Igloo!</h2>
+                <p>It's good to see you again, <span sec:authentication="name">Coder</span>.</p>
+                <button onclick="closePopup()" class="btn btn-primary">Let's Build!</button>
+            </div>
+        </div>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Chill in the <span>Igloo</span></h1>
+                <p>Every Midnight Coder has their own igloo. Grab your laptop, find your spot, and start building in the coolest community around.</p>
+            </div>
+            <div class="hero-image">
+                <div class="scene-container">
+                    <img th:src="@{/img/TMC.png}" alt="The Midnight Coder" class="tmc-mascot">
+                    <div class="aurora-illustration"></div>
+                    <div class="igloo">
+                        <div class="igloo-door"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="midnight-manifesto">
+            <div class="manifesto-content">
+                <h2>Who the Midnight Coders are?</h2>
+                <p>
+                    A Midnight Coder is someone with a full life and an unfinished itch to build.
+                    When the world finally quiets down, we retreat to our corner of the house,
+                    pour a fresh cup of coffee, and open the laptop inside our igloo.
+                </p>
+                <p>
+                    This is where curiosity takes over. We write code we don’t fully understand yet—
+                    but we understand why we’re writing it. It compiles. It ships.
+                    It becomes experience.
+                </p>
+                <p class="manifesto-highlight">
+                    Midnight Coder is a living portfolio. One link you can hand to a recruiter
+                    that shows your projects, your growth, and your consistency.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <th:block th:fragment="scripts">
+    </th:block>
+</body>
+</html>

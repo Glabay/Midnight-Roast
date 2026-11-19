@@ -1,0 +1,150 @@
+:root {
+    --midnight-bg: #0b0e14;
+    --midnight-deep: #05070a;
+
+    --aurora-violet: #a855f7;
+    --aurora-purple: #9d50bb;
+    --aurora-pink: #ff0080;
+    --aurora-red: #ff0000;
+    --aurora-yellow: #f1c56a;
+    --aurora-blue: #3b82f6;
+    --aurora-cyan: #06b6d4;
+    --aurora-green: #10b981;
+    --neon-purple: #a855f7;
+    --neon-purple-glow: rgba(168, 85, 247, 0.4);
+
+    --text-color: #e0e0e0;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(224, 224, 224, 0.75);
+    --text-muted: rgba(224, 224, 224, 0.6);
+
+    --accent-color: #bb86fc;
+
+    --midnight-card: rgba(255, 255, 255, 0.03);
+    --midnight-border: rgba(168, 85, 247, 0.15);
+    --midnight-bg-card: rgba(168, 85, 247, 0.15);
+
+    --bg-secondary: rgba(255, 255, 255, 0.03);
+    --border-color: rgba(255, 255, 255, 0.08);
+
+    --primary-color: var(--aurora-violet);
+
+    --ice-blue: #a5f2f3;
+    --ice-shadow: #74c7d3;
+    --penguin-black: #2c2c2c;
+    --penguin-white: #ffffff;
+    --beak-orange: #ff9d00;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-subtle: #64748b;
+
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.social-links a {
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-2px);
+    color: #1da1f2;
+}
+.oauth-section {
+    margin-bottom: 24px;
+}
+.btn-github {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #181f30;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    width: 90%;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-github:hover {
+    background: #232b42;
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 20px var(--neon-purple-glow);
+    transform: translateY(-2px);
+}
+
+.btn-github svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 24px 0;
+    color: var(--text-subtle);
+    font-size: 0.8rem;
+    font-family: var(--font-mono), serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.divider span {
+    padding: 0 14px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--midnight-bg) 0%, var(--midnight-deep) 100%);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.aurora-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.aurora-glow::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(157, 80, 187, 0.1) 0%, transparent 40%);
+    filter: blur(80px);
+    animation: aurora-move 20s infinite alternate;
+}
+
+@keyframes aurora-move {
+    from { transform: translate(0, 0); }
+    to { transform: translate(5%, 5%); }
+}
+
+main {
+    flex: 1;
+}

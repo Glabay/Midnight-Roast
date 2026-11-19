@@ -1,0 +1,83 @@
+.register-container {
+    width: 90%;
+    max-width: 450px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.register-logo {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.register-logo img {
+    height: 80px;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.4));
+}
+
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--aurora-violet);
+}
+
+.register-container h2 span {
+    color: var(--aurora-violet);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #bbb;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: var(--aurora-violet);
+    outline: none;
+    box-shadow: 0 0 5px var(--aurora-violet);
+}
+
+.register-btn {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.error-message {
+    color: #ff4d4d;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.auth-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #bbb;
+}
+
+.auth-footer a {
+    color: var(--aurora-violet);
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
