@@ -4,6 +4,14 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+# Project Specific
+.env
+.aiassistant/
+.codex/
+.junie/
+.dev/
+logs/
+
 ### STS ###
 .apt_generated
 .classpath
