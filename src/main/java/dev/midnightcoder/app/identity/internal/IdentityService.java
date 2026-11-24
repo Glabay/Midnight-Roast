@@ -9,8 +9,6 @@ import dev.midnightcoder.app.identity.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.jspecify.annotations.NullMarked;
 import org.jspecify.annotations.Nullable;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -29,7 +27,6 @@ import java.util.Optional;
 @NullMarked
 @RequiredArgsConstructor
 class IdentityService implements IIdentityService {
-    private static final Logger log = LoggerFactory.getLogger(IdentityService.class);
 
     private final ApplicationEventPublisher eventPublisher;
 
