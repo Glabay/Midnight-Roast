@@ -91,8 +91,7 @@ public class CookieHelper {
     private ResponseCookie.ResponseCookieBuilder baseCookieBuilder(String name, String value) {
         ResponseCookie.ResponseCookieBuilder b = ResponseCookie.from(name, value)
             .secure(secureCookies)
-            .sameSite("None")
-            .secure(true);
+            .sameSite("None");
         if (cookieDomain != null) b.domain(cookieDomain);
         return b;
     }
