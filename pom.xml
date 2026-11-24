@@ -5,8 +5,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.2.0-RC2</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>4.2.0</version>
+        <relativePath/>
     </parent>
     <groupId>dev.midnightcoder</groupId>
     <artifactId>Midnight-Roast</artifactId>
@@ -33,12 +33,13 @@
     </scm>
     <properties>
         <java.version>27</java.version>
-        <spring-modulith.version>2.2.0-RC1</spring-modulith.version>
+        <spring-modulith.version>2.2.0</spring-modulith.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>3.2.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -108,13 +109,6 @@
             <version>0.13.0</version>
         </dependency>
 
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-docker-compose</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
