@@ -5,7 +5,7 @@ services:
     env_file:
       - .env
     ports:
-      - "5442:5432"
+      - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -21,7 +21,7 @@ services:
     image: redis:8.12.0-alpine
     container_name: midnight-redis
     ports:
-      - "6379:6379"
+      - "6380:6379"
     volumes:
       - redis_data:/data
 
