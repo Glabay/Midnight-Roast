@@ -13,12 +13,17 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>Midnight-Roast</name>
     <description>Midnight-Roast</description>
-    <url/>
+    <url>https://midnightcoder.dev</url>
     <licenses>
         <license/>
     </licenses>
     <developers>
-        <developer/>
+        <developer>
+            <name>Mike GLabay</name>
+            <email>GlabayStudios@outlook.com</email>
+            <organization>The Midnight Coder</organization>
+            <organizationUrl>https://midnightcoder.dev</organizationUrl>
+        </developer>
     </developers>
     <scm>
         <connection/>
