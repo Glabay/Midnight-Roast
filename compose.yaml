@@ -17,6 +17,14 @@ services:
     networks:
       - midnight-network
 
+  redis:
+    image: redis:8.12.0-alpine
+    container_name: midnight-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
 networks:
   midnight-network:
     driver: bridge
@@ -24,3 +32,4 @@ networks:
 volumes:
   postgres_data:
     driver: local
+  redis_data:
